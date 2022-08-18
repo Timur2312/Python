@@ -53,8 +53,9 @@
 
 # *Вводим с клавиатуры два целых числа X и Y ( X <  Y).
 #Необходимо найти целое число из отрезка [X; Y] с максимальной суммой делителей.
-# x = int(input("Введите X"))
-# y = int(input("Введите Y"))
+#x = int(input("Введите X"))
+#y = int(input("Введите Y"))
+
 
 
 # Вводим с клавы число х - целое, а затем вводим х разных целых чисел.
@@ -63,9 +64,15 @@
 a = int(input("Введите число "))
 b = int(input("Введите число "))
 c = int(input("Введите число "))
-max = a
+max = 0
+second = 0
 if max < b:
     max = b
 if max < c:
     max = c
 print(max)
+if a < b : second = b
+if a > b : second = a
+if b < c : second = b
+if b > c : second = c
+print(second)
