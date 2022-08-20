@@ -2,28 +2,18 @@
 #     Далее вводим Х целых чисел.
 #     Необходимо вывести на экран максимальное и второе максимальное число из введенных чисел.
 
-a = int(input("Введите число "))
-b = int(input("Введите число "))
-c = int(input("Введите число "))
-max = a
-second = 0
-if a > max:
-    max = a
-if b > max:
-    max = b
-if c > max:
-    max = c
-print(max)
-if a > b and a < max:
-    second = a
-if a > c and a < max:
-    seocnd = a
-if b > a and b < max:
-    second = b
-if b > c and b < max:
-    second = b
-if c > a and c < max:
-    second = c
-if c > b and c < max:
-    second = c
-print(second)
+x = int(input("Введите количество чисел "))
+a = int(input())  # максимальное число
+b = int(input())  # второе максимальное число
+if a < b:
+    a, b = b, a
+
+for _ in range(x - 2):
+    c = int(input())
+    if b < c:
+        b = c
+    if a < b:
+        a, b = b, a
+
+print(f"{a} Максимальное число")
+print(f"{b} Второе максимальное число")

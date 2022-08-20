@@ -3,8 +3,20 @@
 #     И сколько, и каких бухгалтер выдаст 25 рублевых купюр,  10 рублевых, 5 рублевых и 1 рублевых
 
 
-salary = int(input("Введите свою зарплату "))
-print(f"{salary//25} количестко 25 рублевых купюр")
-print(f"{salary//10} количестко 10 рублевых купюр")
-print(f"{salary//5} количестко 5 рублевых купюр")
-print(f"{salary//1} количестко 1 рублевых купюр")
+salary, total25, total10, total5, total1, = int(
+    input("Введите свою зарплату ")), 0, 0, 0, 0
+
+while salary >= 25:
+    salary -= 25
+    total25 += 1
+while salary >= 10:
+    salary -= 10
+    total10 += 1
+while salary >= 5:
+    salary -= 5
+    total5 += 1
+while salary >= 1:
+    salary -= 1
+    total1 += 1
+
+print(f'{total25}  {total10}  {total5}  {total1}')
